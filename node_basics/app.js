@@ -1,5 +1,5 @@
 const math = require('./helpers');
-const readline = require("readline");
+const readline = require('readline');
 
 rl = readline.createInterface({
 	input: process.stdin,
