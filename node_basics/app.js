@@ -1,4 +1,4 @@
-const math = require('./helpers');
+const {square , is_prime} = require('./helpers');
 const readline = require('readline');
 
 rl = readline.createInterface({
@@ -7,7 +7,7 @@ rl = readline.createInterface({
 });
 
 rl.question('Enter a number ', (answer) => {
-	res = math.is_prime(answer);
+	res = square(answer);
 	console.log(res);
 	rl.close();
 });

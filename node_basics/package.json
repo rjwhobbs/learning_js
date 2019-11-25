@@ -1,0 +1,22 @@
+{
+  "name": "node_basics",
+  "version": "1.0.0",
+  "description": "Learning node",
+  "main": "app2.js",
+  "scripts": {
+    "dev": "nodemon app2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjwhobbs/learning_js.git"
+  },
+  "author": "Cat Dog",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjwhobbs/learning_js/issues"
+  },
+  "homepage": "https://github.com/rjwhobbs/learning_js#readme",
+  "dependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
