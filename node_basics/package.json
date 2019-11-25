@@ -4,7 +4,7 @@
   "description": "Learning node",
   "main": "app2.js",
   "scripts": {
-    "dev": "nodemon app2.js"
+    "dev": "nodemon app3.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rjwhobbs/learning_js#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^2.0.1"
   }
 }
