@@ -1,0 +1,19 @@
+{
+  "name": "learnjs",
+  "version": "1.0.0",
+  "description": "learn js",
+  "main": "basics.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Learn"
+  ],
+  "author": "Batman",
+  "license": "ISC"
+}

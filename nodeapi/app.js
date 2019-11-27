@@ -25,5 +25,5 @@ app.use('/', postRoutes);
 //app.get('/', getPosts);
 
 app.listen(port, () => {
-	console.log("Stuff");
+	console.log("Connected");
 });
