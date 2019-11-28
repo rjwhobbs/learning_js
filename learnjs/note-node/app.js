@@ -1,17 +1,20 @@
 const fs = require('fs');
-const os = require('os');
 const _ = require('lodash');
-const func = require('./notes.js');
+const yargs = require('yargs');
 
-console.log(_.isString(true));
-console.log(_.isString('true'));
-console.log(_.isString('1'));
-console.log(_.isString(1));
-//console.log(func.add(11, -5));
-// var user = os.userInfo();
+const notes = require('./notes.js');
 
-// console.log(user);
+const argv = yargs.argv;
+const command = argv._[0];
 
-// fs.appendFile('message.txt', 'howzit ' + user.username, (err) => {
-// 	if (err) throw err;
-// });
+if (command === 'add') {
+	notes.addNote(argv.title, argv.body);
+} else if (command === 'list') {
+	notes.getAll();
+} else if (command === 'read') {
+	notes.getNote(argv.title);
+} else if (command === 'remove') {
+	notes.removeNote(argv.title);
+} else {
+	console.log('Command not found.');
+}
