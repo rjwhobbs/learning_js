@@ -12,6 +12,12 @@ module.exports.addNote = (title, body) => {
 	} catch (e) {
 		
 	}
+	var duplicates = notes.filter((note) => note.title === title);
+
+	if (duplicates.length === 0){
+		notes.push(note);
+		fs.writeFileSync('notes-data.json', JSON.stringify(notes));	
+	}
 };
 
 module.exports.getAll = () => {
