@@ -1,5 +1,17 @@
+const fs = require('fs');
+
 module.exports.addNote = (title, body) => {
-	console.log('Your title: ' + title, 'Your body: ' + body);
+	var notes = [];
+	var note = {
+		title,
+		body
+	};
+	try {
+		var noteString = fs.readFileSync('notes-data.json');
+		notes = JSON.parse(noteString);
+	} catch (e) {
+		
+	}
 };
 
 module.exports.getAll = () => {
