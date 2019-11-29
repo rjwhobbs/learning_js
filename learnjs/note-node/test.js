@@ -6,10 +6,10 @@ const result = words.filter(function (word) {
 	}
 });
 
-// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const words2 = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-// const result = words.filter(word => word.length > 6);
-
-// console.log(result);
+const result2 = words2.filter(word => word.length > 6);
 
 console.log(result);
+
+console.log(result2);
