@@ -7,10 +7,10 @@ module.exports.addNote = (title, body) => {
 		body
 	};
 	try {
-		var noteString = fs.readFileSync('notes-data.json');
+		var noteString  = fs.readFileSync('notes-data.json');
 		notes = JSON.parse(noteString);
 	} catch (e) {
-		
+		console.log("error adding note: " + e);
 	}
 	var duplicates = notes.filter((note) => note.title === title);
 

@@ -1,11 +1,15 @@
-var arr = [];
-var cat = 'cat';
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-var test = '[{"this" : "that"}]';
-var test2 = {
-	cat	
-};
+const result = words.filter(function (word) {
+	if (word.length > 6) {
+		return word;
+	}
+});
 
-arr = JSON.parse(test);
-arr.push(test2);
-console.log(arr);
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter(word => word.length > 6);
+
+// console.log(result);
+
+console.log(result);
