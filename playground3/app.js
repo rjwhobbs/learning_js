@@ -11,4 +11,8 @@ let conn = mysql.createConnection({
 conn.connect((err) => {
 	if (err) throw err;
 	console.log("Connection established");
+	conn.query('CREATE DATABASE IF NOT EXISTS testdb', (err) => {
+		if (err) throw err;
+		console.log('Database created');
+	});
 });
