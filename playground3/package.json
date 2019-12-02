@@ -1,0 +1,16 @@
+{
+  "name": "playground3",
+  "version": "1.0.0",
+  "description": "MySQL prac",
+  "main": "app.js",
+  "scripts": {
+    "devstart": "nodemon app.js"
+  },
+  "author": "Batman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^2.0.1"
+  }
+}
