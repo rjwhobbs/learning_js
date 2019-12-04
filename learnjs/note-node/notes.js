@@ -21,7 +21,7 @@ module.exports.addNote = (title, body) => {
 		body
 	};
 	
-	var duplicates = notes.filter((note) => note.title === title);
+	var duplicates = notes.filter((fishpaste) => fishpaste.title === title);
 
 	if (duplicates.length === 0){
 		notes.push(note);
@@ -39,5 +39,8 @@ module.exports.getNote = (title) => {
 }
 
 module.exports.removeNote = (title) => {
-	console.log('Removing: ' + title);
+	let notes = fetchNotes();
+	let updatedNotes = notes.filter((fishpaste) => fishpaste.title !== title);
+	saveNotes(updatedNotes);
+	return notes.length !== updatedNotes.length;
 }
