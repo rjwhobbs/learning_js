@@ -16,7 +16,12 @@ if (command === 'add') {
 		notes.logNote(note);
 	}
 } else if (command === 'list') {
-	notes.getAll();
+	let allNotes = notes.getAll();
+	console.log(`Available notes: ${allNotes.length}`);
+	allNotes.forEach(note => {
+		console.log('-------');
+		notes.logNote(note);
+	});
 } else if (command === 'read') {
 	let noteToRead = notes.getNote(argv.title);
 	if (noteToRead !== undefined) {

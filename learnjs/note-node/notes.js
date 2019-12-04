@@ -31,7 +31,7 @@ module.exports.addNote = (title, body) => {
 };
 
 module.exports.getAll = () => {
-	console.log('Getting all notes.');
+	return fetchNotes();
 }
 
 module.exports.getNote = (title) => {
