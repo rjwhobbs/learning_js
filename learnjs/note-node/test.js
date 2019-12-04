@@ -18,6 +18,8 @@ console.log(result2);
 var str = 'undefined';
 var str2;
 
+debugger;
+
 if (str == undefined) {
 	console.log('== str');
 }

@@ -13,13 +13,18 @@ if (command === 'add') {
 		console.log(`${argv.title} already exits.`);
 	} else {
 		console.log("Note created.")
-		console.log(`Title: ${note.title}`);
-		console.log(`Body: ${note.body}`);
+		notes.logNote(note);
 	}
 } else if (command === 'list') {
 	notes.getAll();
 } else if (command === 'read') {
-	notes.getNote(argv.title);
+	let noteToRead = notes.getNote(argv.title);
+	if (noteToRead !== undefined) {
+		console.log('Reading...');
+		notes.logNote(noteToRead);
+	} else {
+		console.log(`Sorry can't read ${argv.title}. Please check your title.`);
+	}
 } else if (command === 'remove') {
 	let removeStatus = notes.removeNote(argv.title);
 	let message = removeStatus ? `${argv.title} removed.` : 

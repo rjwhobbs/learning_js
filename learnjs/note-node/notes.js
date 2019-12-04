@@ -35,7 +35,10 @@ module.exports.getAll = () => {
 }
 
 module.exports.getNote = (title) => {
-	console.log('Getting: ' + title);
+	debugger;
+	let notes = fetchNotes();
+	let noteToRead = notes.filter(fishpaste => fishpaste.title === title);
+	return noteToRead[0]; 
 }
 
 module.exports.removeNote = (title) => {
@@ -43,4 +46,9 @@ module.exports.removeNote = (title) => {
 	let updatedNotes = notes.filter((fishpaste) => fishpaste.title !== title);
 	saveNotes(updatedNotes);
 	return notes.length !== updatedNotes.length;
+}
+
+module.exports.logNote = (note) => {
+	console.log(`Title:\n${note.title}`);
+	console.log(`\nBody:\n${note.body}`);
 }
